@@ -115,7 +115,7 @@ for (int i = 0; i < nums.size(); i++) {
 
 :::
 
-# Stack
+## Stack
 
 A stack is a linear data structure that follows a particular order in which the operations are performed. The order is LIFO(Last In First Out). The principal operations of a stack are:
 
@@ -177,7 +177,7 @@ int main() {
 
 :::
 
-# Queue
+## Queue
 
 A queue is another linear data structure that follows a particular order in which the operations are performed. The order is FIFO(First In First Out). The principal operations of a queue are:
 
