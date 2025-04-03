@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Computer Science Essentials"
   text: "Digital garden of concepts in data structures, algorithms, and programming."
-  tagline: My great project tagline
+  tagline:
   actions:
     - theme: brand
       text: Markdown Examples
@@ -13,6 +13,9 @@ hero:
     - theme: alt
       text: API Examples
       link: /api-examples
+    - theme: brand
+      text: Hello
+      link: /markdown-examples
 
 features:
   - title: Feature A
@@ -22,4 +25,3 @@ features:
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-

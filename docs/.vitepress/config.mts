@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig, type DefaultTheme } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -11,25 +11,71 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Data Structures & Algorithms', link: '/dsa/dstruct/arrays' },
+      { text: 'Programming', link: '/programming/programming' }
     ],
 
-    sidebar: [
-      {
-        text: 'Data Structures & Algorithms',
-        items: [
-          { text: 'Arrays, Stacks, & Queues', link: '/algos/arrays' },
-          { text: 'Linked Lists', link: '/algos/linked-lists' },
-
-
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    sidebar: {
+      '/dsa/': { base: '/dsa/', items: sidebarDSA() },
+      '/programming/': { base: '/programming/', items: sidebarProgramming() },
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ajagekarakshay/computer-science-essentials' }
     ]
   }
 })
+
+function sidebarDSA(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'Data Structures',
+      collapsed: false,
+      items: [
+        { text: 'Arrays', link: 'dstruct/arrays' },
+        { text: 'Linked Lists', link: 'dstruct/linked-lists' },
+      ]
+    },
+    {
+      text: 'Algorithms',
+      collapsed: true,
+      items: [
+
+      ]
+    },
+    {
+      text: 'Leetcode Problems',
+      collapsed: false,
+      items: [
+
+      ]
+    },
+  ]
+}
+
+function sidebarProgramming(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'Data Structures',
+      collapsed: false,
+      items: [
+        { text: 'Arrays', link: 'dstruct/arrays' },
+        { text: 'Linked Lists', link: 'dstruct/linked-lists' },
+      ]
+    },
+    {
+      text: 'Algorithms',
+      collapsed: true,
+      items: [
+
+      ]
+    },
+    {
+      text: 'Leetcode Problems',
+      collapsed: false,
+      items: [
+
+      ]
+    },
+  ]
+}
